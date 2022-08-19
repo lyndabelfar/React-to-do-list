@@ -1,13 +1,121 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Mukta&family=Open+Sans:ital,wght@1,300&family=Outfit:wght@200&family=PT+Sans+Caption&family=Roboto:wght@300;400&family=Source+Serif+Pro&display=swap');
+
+body{
+  font-family: 'DM Sans', sans-serif;
+  font-family: 'Mukta', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Outfit', sans-serif;
+  font-family: 'PT Sans Caption', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Source Serif Pro', serif;  
+  background: url('./images/bg-desktop-dark.jpg') no-repeat;
+  background-color: hsl(235, 21%, 11%);
+  object-fit: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+#root{
+  width: 35%;
+}
+.container{
+  width: 100%;
+}
+.container-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Mukta', sans-serif;
+  color: white;
+  letter-spacing: 5px;
+  font-size: 1.3rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.bg-theme-btn{
+  background: none;
+  border: none;
+  color: white;
 }
+.todo-input{
+  background: hsl(235, 24%, 19%);
+  color: white;
+  font-size: 1.25rem;
+  border: 1px solid hsl(235, 24%, 19%);
+  border-radius: 4px;
+  padding: 10px;
+  width: 100%;
+  font-family: 'Outfit', sans-serif;
+
+}
+
+ul{
+  width: 100%;
+  font-family: 'Outfit', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+li{
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.1rem;
+  background: hsl(235, 24%, 19%);
+  color: white;
+  border: 1px solid hsl(235, 24%, 19%);
+  border-radius: 4px;
+  padding: 10px;
+  margin-left: -54px;
+  border-bottom: 0.4px solid rgb(87, 87, 87);
+  
+}
+p{
+  margin-left: 20px;
+}
+button{
+  cursor: pointer;
+}
+
+.bottom-btns{
+  font-family: 'Outfit', sans-serif;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  background: hsl(235, 24%, 19%);
+  color: white;
+  border: 1px solid hsl(235, 24%, 19%);
+  border-radius: 4px;
+  padding: 10px;
+  color: hsl(234, 39%, 85%);
+  
+}
+
+.all, .active, .completed, .clear-completed-btn{
+  background: none;
+  border: none;
+  color: hsl(234, 39%, 85%);
+
+}
+
+.check-btn{
+  width: 30px;
+  height: 30px;
+  color: white;
+  border-radius: 50%;
+  background: transparent;
+  border: 0.2px solid rgba(255, 255, 255, 0.4);
+}
+
+.completed{
+  border: 1px solid rgba(255, 255, 255, 0.356);
+  background-image: linear-gradient( to right, hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
+}
+
