@@ -1,5 +1,6 @@
 import {useState} from 'react'
-import Todo from './Todo'
+import Form from './Form'
+import TodoList from './TodoList'
 
 function App() {
   const [value, setValue] = useState('')
@@ -13,7 +14,7 @@ function App() {
 
   const handleSubmit =(e)=>{
     e.preventDefault();
-    const newItem = {id: new Date().getTime().toString(), text:value}
+    const newItem = {id: new Date().getTime().toString(), text:value, completed:false}
     setTodos([...todos, newItem])
     setValue('')
 
@@ -32,23 +33,11 @@ function App() {
         <h1 className="logo">TODO</h1>
         <button className="bg-theme-btn">Btn</button>
       </div>
+      <Form handleSubmit={handleSubmit}  value={value} handleInputChange={handleInputChange}/>      
       
-      <form onSubmit={handleSubmit} >
-        <input 
-        type="text" 
-        placeholder='Create a new todo...' 
-        className='todo-input' 
-        value={value}
-        onChange={handleInputChange}
-        />
-      </form>
+      <TodoList todos={todos}  setTodos={setTodos}/>
       
-      <div className="lists">
-        <ul>
-          <Todo todos={todos}/>
-          
-        </ul>
-      </div>
+        
       
       <div className="bottom-btns">
         

@@ -57,10 +57,10 @@ ul{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  list-style-type: none;
   
 }
-li{
-  list-style-type: none;
+.list-div{
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -114,8 +114,12 @@ button{
   border: 0.2px solid rgba(255, 255, 255, 0.4);
 }
 
-.completed{
+.completed-btn{
   border: 1px solid rgba(255, 255, 255, 0.356);
   background-image: linear-gradient( to right, hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
+}
+.completed-p{
+  color: gray;
+  text-decoration-line: line-through;
 }
 
